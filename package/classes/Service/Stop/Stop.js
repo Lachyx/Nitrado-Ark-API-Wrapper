@@ -15,19 +15,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 function ServiceStop(service_id, message, stop_message, Authorization) {
     return __awaiter(this, void 0, void 0, function* () {
-        const Endpoint = `https://api.nitrado.net/services/${service_id}/gameservers/stop`;
-        try {
-            const response = yield axios_1.default.post(Endpoint, { message, stop_message }, {
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": Authorization
-                }
-            });
-            return response.data;
-        }
-        catch (error) {
-            throw error;
-        }
+        const response = yield axios_1.default.post(`https://api.nitrado.net/services/${service_id}/gameservers/stop`, { message, stop_message }, {
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": Authorization
+            }
+        });
+        return response.data;
     });
 }
 exports.default = ServiceStop;

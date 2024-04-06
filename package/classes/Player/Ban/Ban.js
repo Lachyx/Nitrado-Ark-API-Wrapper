@@ -15,19 +15,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 function PlayerBan(identifier, service_id, Authorization) {
     return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const response = yield axios_1.default.post(`https://api.nitrado.net/services/${service_id}/gameservers/games/banlist`, { identifier }, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': Authorization,
-                },
-            });
-            return response.data;
-        }
-        catch (error) {
-            console.error(error);
-            throw error;
-        }
+        const response = yield axios_1.default.post(`https://api.nitrado.net/services/${service_id}/gameservers/games/banlist`, { identifier }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': Authorization,
+            },
+        });
+        return response.data;
     });
 }
 exports.default = PlayerBan;

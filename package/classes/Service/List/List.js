@@ -15,17 +15,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 function ServiceList(Authorization) {
     return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const response = yield axios_1.default.get("https://api.nitrado.net/services", {
-                headers: {
-                    Authorization: Authorization
-                }
-            });
-            return response.data;
-        }
-        catch (error) {
-            throw error;
-        }
+        const response = yield axios_1.default.get("https://api.nitrado.net/services", {
+            headers: {
+                Authorization: Authorization
+            }
+        });
+        return response.data;
     });
 }
 exports.default = ServiceList;
