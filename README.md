@@ -17,11 +17,11 @@ npm i nitrado-ark-api-wrapper
 const { GameService, PlayerService  } = require('nitrado-ark-api-wrapper')
 
 const Players = new PlayerService('Auth')
-const Service = new GameService('Auth')
+const Services = new GameService('Auth')
 
 try {
     Players.Ban('player_identifier', 'service_id')
-    Service.Stop('service_id')
+    Services.Stop('service_id')
 } catch (err) {
     console.log(err)
 };
