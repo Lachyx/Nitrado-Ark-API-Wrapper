@@ -1,11 +1,12 @@
 {
   "name": "nitrado-ark-api-wrapper",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Wrapper For Ark Survival Evolved Nitrado API",
   "main": "./package/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": ["nitrado-api", "nitrado", "ark", "nitrado-wrapper"],
   "author": "Lachyx",
   "license": "ISC",
   "dependencies": {
