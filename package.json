@@ -1,6 +1,6 @@
 {
   "name": "nitrado-ark-api-wrapper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Wrapper For Ark Survival Evolved Nitrado API",
   "main": "./package/index.js",
   "scripts": {
