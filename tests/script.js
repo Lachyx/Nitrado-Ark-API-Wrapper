@@ -4,7 +4,7 @@ const Player = new PlayerService('Auth')
 const Service = new GameService('Auth')
 
 try {
-    Player.Ban('XXXXX', 313123)
+    Player.Ban('player_identifier', 'service_id')
 } catch (err) {
     console.log(err)
 };
