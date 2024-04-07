@@ -15,11 +15,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 function PlayerUnban(identifier, service_id, Authorization) {
     return __awaiter(this, void 0, void 0, function* () {
-        const response = yield axios_1.default.post(`https://api.nitrado.net/services/${service_id}/gameservers/games/banlist`, { identifier }, {
+        const response = yield axios_1.default.delete(`https://api.nitrado.net/services/${service_id}/gameservers/games/banlist`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': Authorization,
             },
+            data: {
+                identifier: identifier
+            }
         });
         return response.data;
     });
