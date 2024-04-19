@@ -7,7 +7,7 @@ https://github.com/Lachyx/Nitrado-Ark-API-Wrapper
 
 Any errors or issues I really don't care but raise a issue on github
 
-```bash
+```zsh
 npm i nitrado-ark-api-wrapper
 ```
 
